@@ -21,6 +21,7 @@ import { HomeFAQ } from "@/components/aurexo/HomeFAQ";
 import { BookingWidget } from "@/components/aurexo/BookingWidget";
 import { WHATSAPP_NUMBER } from "@/lib/whatsapp";
 import { articles } from "@/lib/articles";
+import { CertificationCards } from "@/components/aurexo/CertificationCards";
 import heroCollage from "@/assets/hero-collage.png";
 import prestigeShineLogo from "@/assets/prestige-shine-logo.png";
 import prestigeShineSocialImage from "@/assets/prestige-shine-lgo.jpg";
@@ -40,7 +41,6 @@ import pontiacTransAm from "@/assets/pontiac_trans_am.jpg";
 import camaroBefore from "@/assets/camaro_before.jpg";
 import camaroAfter from "@/assets/camaro_after.jpg";
 import camaro from "@/assets/camaro.jpg";
-import systemXCertificate from "@/assets/certifications/certificate.jpeg";
 
 const HERO_IMG = heroCollage;
 
@@ -323,7 +323,7 @@ function Home() {
             {[
               {
                 icon: ShieldCheck,
-                num: "System X Certified Installer",
+                num: "System X Authorized Installer",
                 label: "Professional Ceramic Coatings",
               },
               {
@@ -356,44 +356,33 @@ function Home() {
         </div>
       </section>
 
-      {/* System X Certification */}
+      {/* Official Certifications */}
       <section className="mx-auto mt-6 max-w-6xl px-4 pb-12">
         <Reveal>
-          <div className="grid grid-cols-1 overflow-hidden rounded-3xl border border-border bg-white lg:grid-cols-2">
-            {/* Text */}
-            <div className="flex flex-col items-start justify-center p-8 sm:p-12">
-              <p className="text-xs font-bold uppercase tracking-wide text-brand">
-                System X Certification
-              </p>
-
-              <h2 className="mt-2 text-2xl font-bold text-ink">
-                Kevin, System X Certified Installer
-              </h2>
-
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                Kevin Hines is an authorized System X applicator, trained to
-                meet the quality process standards required for professional
-                System X ceramic coating applications. Explore ceramic coating
-                services prepared and applied with care at the Prestige Shine
-                shop in Miramichi.
-              </p>
+          <div className="rounded-3xl border border-border bg-white p-6 sm:p-10">
+            <p className="text-xs font-bold uppercase tracking-wide text-brand">
+              Official Certifications
+            </p>
+            <div className="mt-2 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
+              <div>
+                <h2 className="text-2xl font-bold text-ink">
+                  Kevin's Ceramic Coating Credentials
+                </h2>
+                <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+                  View Kevin Hines's official System X and Gtechniq
+                  certificates.
+                </p>
+              </div>
 
               <Link
                 to="/about"
-                className="mt-5 inline-flex min-h-10 items-center gap-2 rounded-xl bg-brand px-4 py-2 text-sm font-semibold text-brand-foreground transition hover:bg-brand/90"
+                className="inline-flex min-h-10 shrink-0 items-center gap-2 rounded-xl bg-brand px-4 py-2 text-sm font-semibold text-brand-foreground transition hover:bg-brand/90"
               >
                 Learn More <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
-
-            {/* Certificate */}
-            <div className="min-h-[320px] bg-surface sm:min-h-[380px] lg:min-h-0">
-              <img
-                src={systemXCertificate}
-                alt="System X certified ceramic coating installer certificate"
-                className="h-full w-full object-contain"
-                loading="lazy"
-              />
+            <div className="mt-6">
+              <CertificationCards />
             </div>
           </div>
         </Reveal>

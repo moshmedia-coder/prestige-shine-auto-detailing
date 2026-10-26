@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import { PageHeader } from "@/components/aurexo/PageHeader";
 import { Reveal } from "@/components/aurexo/Reveal";
+import { CertificationCards } from "@/components/aurexo/CertificationCards";
 import baAfter1 from "@/assets/ba-after-1.jpg";
 import baAfter3 from "@/assets/ba-after-3.jpg";
 import bmwX5 from "@/assets/bmwx5.jpg";
@@ -420,6 +421,23 @@ function Services() {
               </button>
             </div>
           </article>
+        </Reveal>
+      </section>
+
+      {/* Ceramic coating certifications */}
+      <section className="mx-auto max-w-6xl px-4 pb-12">
+        <Reveal>
+          <div className="rounded-3xl border border-border bg-white p-6 sm:p-10">
+            <p className="text-xs font-bold uppercase tracking-wide text-brand">
+              Ceramic Coating Credentials
+            </p>
+            <h2 className="mt-2 text-2xl font-bold text-ink">
+              Official Certifications
+            </h2>
+            <div className="mt-5">
+              <CertificationCards />
+            </div>
+          </div>
         </Reveal>
       </section>
 

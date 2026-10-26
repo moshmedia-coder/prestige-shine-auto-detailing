@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ShieldCheck, Paintbrush, MapPin } from "lucide-react";
 import { PageHeader } from "@/components/aurexo/PageHeader";
 import { Reveal } from "@/components/aurexo/Reveal";
-import systemXCertificate from "@/assets/certifications/certificate.jpeg";
+import { CertificationCards } from "@/components/aurexo/CertificationCards";
 import { team } from "@/lib/team";
 import chevelleDetail from "@/assets/chevelle-ss-detail.jpg";
 
@@ -51,7 +51,7 @@ function About() {
         {[
           {
             i: ShieldCheck,
-            n: "System X Certified Installer",
+            n: "System X Authorized Installer",
             l: "Professional Ceramic Coating Specialist",
           },
           {
@@ -95,8 +95,8 @@ function About() {
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                 Prestige Shine Auto Detailing is owned and operated by Kevin
                 Hines out of a clean, organised shop at 229 Jacqueline Dr in
-                Miramichi, NB. Kevin is a System X certified ceramic coating
-                installer and a paint correction specialist — every vehicle is
+                Miramichi, NB. Kevin is a System X Authorized Installer and a
+                paint correction specialist — every vehicle is
                 personally inspected and quality-controlled by Kevin, whether
                 it's a daily driver, a work truck, or a classic like this
                 Chevelle SS.
@@ -106,42 +106,26 @@ function About() {
         </Reveal>
       </section>
 
-   {/* System X Certification */}
-<section className="mx-auto max-w-6xl px-4 pb-12">
-  <Reveal>
-    <div className="grid grid-cols-1 overflow-hidden rounded-3xl border border-border bg-white lg:grid-cols-2">
-      {/* Text */}
-      <div className="flex flex-col justify-center p-8 sm:p-12">
-        <p className="text-xs font-bold uppercase tracking-wide text-brand">
-          System X Certification
-        </p>
-
-        <h2 className="mt-2 text-2xl font-bold text-ink">
-          Certified Ceramic Coating Installer
-        </h2>
-
-        <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-          Kevin Hines is an authorized System X applicator, having completed
-          the required training and certification to apply System X ceramic
-          coatings. This certification reflects the training and quality
-          standards required for professional System X applications. Kevin
-          personally handles the preparation and application process at the
-          Prestige Shine shop in Miramichi.
-        </p>
-      </div>
-
-      {/* Certificate */}
-      <div className="min-h-[320px] bg-surface sm:min-h-[380px] lg:min-h-0">
-        <img
-          src={systemXCertificate}
-          alt="System X certified ceramic coating installer certificate"
-          className="h-full w-full object-contain"
-          loading="lazy"
-        />
-      </div>
-    </div>
-  </Reveal>
-</section>
+      {/* Official Certifications */}
+      <section className="mx-auto max-w-6xl px-4 pb-12">
+        <Reveal>
+          <div className="rounded-3xl border border-border bg-white p-6 sm:p-10">
+            <p className="text-xs font-bold uppercase tracking-wide text-brand">
+              Official Certifications
+            </p>
+            <h2 className="mt-2 text-2xl font-bold text-ink">
+              Ceramic Coating Credentials
+            </h2>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              Kevin's credentials include System X Authorized Installer and
+              Gtechniq Accredited. View each complete certificate below.
+            </p>
+            <div className="mt-6">
+              <CertificationCards />
+            </div>
+          </div>
+        </Reveal>
+      </section>
 
       {/* Mission & values */}
       <section className="mx-auto max-w-6xl px-4 pb-12">
